@@ -1,0 +1,47 @@
+{
+  "name": "@soru/auth",
+  "version": "1.0.0",
+  "description": "A flexible authentication library for NestJS with role-based access control",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist/**/*"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "prepare": "npm run build",
+    "prepublishOnly": "npm test && npm run lint",
+    "test": "echo \"No tests specified\" && exit 0",
+    "lint": "eslint \"src/**/*.ts\" --fix"
+  },
+  "keywords": [
+    "nestjs",
+    "authentication",
+    "authorization",
+    "rbac",
+    "jwt",
+    "permissions"
+  ],
+  "author": "Lar May See",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/larmaysee/soru-auth"
+  },
+  "peerDependencies": {
+    "@nestjs/common": "^10.0.0",
+    "@nestjs/core": "^10.0.0",
+    "@nestjs/jwt": "^10.0.0",
+    "@nestjs/passport": "^10.0.0",
+    "passport": "^0.6.0",
+    "passport-jwt": "^4.0.0",
+    "reflect-metadata": "^0.2.0"
+  },
+  "devDependencies": {
+    "@types/passport-jwt": "^3.0.0",
+    "@typescript-eslint/eslint-plugin": "^8.0.0",
+    "@typescript-eslint/parser": "^8.0.0",
+    "eslint": "^8.0.0",
+    "typescript": "^5.1.3"
+  }
+}
