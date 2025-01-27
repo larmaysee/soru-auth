@@ -1,6 +1,10 @@
 import { Injectable } from '@nestjs/common';
 import { JwtService } from '@nestjs/jwt';
-import { IAuthConfig, IAuthResponse, IAuthUser } from '../interfaces/auth.interface';
+import {
+  IAuthConfig,
+  IAuthResponse,
+  IAuthUser,
+} from '../interfaces/auth.interface';
 
 @Injectable()
 export class AuthService {
@@ -40,7 +44,7 @@ export class AuthService {
       const payload = await this.jwtService.verifyAsync(token, {
         secret: this.config.jwtSecret,
       });
-      
+
       return {
         id: payload.sub,
         email: payload.email,
